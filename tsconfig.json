@@ -3,7 +3,7 @@
     "target": "es5",
     "watch": false,
     "module": "commonjs",
-    "lib": ["ES2018", "DOM"],
+    "lib": ["ESNext"],
     "outDir": "./build",
     "strict": true,
     "noImplicitAny": true,

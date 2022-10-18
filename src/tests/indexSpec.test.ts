@@ -1,7 +1,16 @@
-const myFunc = (num: number): number => {
-  return num * num;
-};
+import supertest from 'supertest';
+import app from '../index';
 
-it('expect myFunc(5) to equal 25', () => {
-  expect(myFunc(5)).toEqual(25);
+const request = supertest(app);
+
+describe('Test endpoint responses', () => {
+  it('sends GET request to /', async () => {
+    const response = await request.get('/');
+    expect(response.status).toBe(200);
+  });
+
+  it('responds with 404 for invalid url', async () => {
+    const response = await request.get('/invalid');
+    expect(response.status).toBe(404);
+  });
 });

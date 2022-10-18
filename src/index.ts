@@ -8,3 +8,5 @@ app.get('/', (req, res) => res.send('this is a test.'));
 app.listen(port, () =>
   console.log(`server running on: http://localhost:${port}`)
 );
+
+export default app;
