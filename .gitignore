@@ -4,6 +4,8 @@ node_modules/
 # Compiled JavaScript code
 build/
 
+# Edited images 
+assets/images/edited/*
 
 # Optional npm cache directory
 .npm

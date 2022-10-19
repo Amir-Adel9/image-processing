@@ -1,12 +1,19 @@
 import express from 'express';
+import router from './routes/routes';
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-app.get('/', (req, res) => res.send('this is a test.'));
+app.use('/api', router);
 
-app.listen(port, () =>
-  console.log(`server running on: http://localhost:${port}`)
+app.get('/', (req, res) =>
+  res.send(
+    'Usage: /api/image?filename={imageName}&width={widthInPixels}&height={heightInPixels}'
+  )
+);
+
+app.listen(PORT, () =>
+  console.log(`server running on: http://localhost:${PORT}`)
 );
 
 export default app;
