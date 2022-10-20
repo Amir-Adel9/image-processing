@@ -1,4 +1,3 @@
-const imagesDir =
-  'D:/VSCode Projects/Fullstack Playground/FWD/image-processing/assets/images';
+const imagesDir = `${process.cwd()}/assets/images`;
 
 export default imagesDir;
