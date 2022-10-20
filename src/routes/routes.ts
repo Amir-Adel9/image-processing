@@ -1,9 +1,12 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import image from './api/image';
 
 const router = express.Router();
 
-router.get('/', (req, res) => res.send('Main api route'));
+router.get(
+  '/',
+  (req: Request, res: Response): Response => res.send('Main api route')
+);
 
 router.use('/image', image);
 
