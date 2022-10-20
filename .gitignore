@@ -5,7 +5,7 @@ node_modules/
 build/
 
 # Edited images 
-assets/images/edited/*
+
 
 # Optional npm cache directory
 .npm
